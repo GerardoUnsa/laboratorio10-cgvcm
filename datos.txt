@@ -1,0 +1,69 @@
+# Preparar el ambiente virtual
+mkdir <project-name> -> the project folder
+cd <project-name> -> go to the project folder
+python3 -m venv env -> create virtual environment
+
+# Activate Virtual Environment ubuntu
+source env/bin/activate
+
+# Deactivate Virtual Environment ubuntu
+deactivate
+
+# Activate Virtual Environment windows
+env\Scripts\activate.bat
+
+# Install Django framework
+pip3 install Django
+
+# Crear proyecto 
+  -> django-admin startproject <project-name> .
+
+# Correr el servidor en el puerto 8000 por defecto
+  -> python3 manage.py runserver
+
+# Definir un puerto especifico
+  -> python3 manage.py runserver <PORT>
+
+# Crear aplicacion
+  -> python3 manage.py startapp <nombre de la aplicacion>
+
+# Habilitar migraciones (actualizar modelos del sistema, listos para enviarse a la base de datos)
+  -> python3 manage.py makemigrations
+
+# Cambiar esquema de la bd (actualizar en la base de datos)
+  -> python3 manage.py migrate
+
+# Crear superusuario
+ -> python3 manage.py createsuperuser
+
+# Terminal de django
+  -> python3 manage.py shell
+
+### Carpetas ###
+- migrations: Encargada de guardar los cambios en la base de datos
+
+### Django principios ###
+MTV: 
+  -> model: define la estructura de los datos
+  -> template: logica de presentacion de datos
+  -> view: encargado de traer los datos y pasarlos al template
+
+### Glosario ###
+
+ORM: Object-relational mapping. Es el encargado de permitir
+el acceso y control de una base de datos relacional a través de
+una abstracción a clases y objetos.
+
+Templates: Archivos HTML que permiten la inclusión y ejecución
+de lógica especial para la presentación de datos.
+
+Modelo: Parte de un proyecto de Django que se encarga de estructurar
+las tablas y propiedades de la base de datos a través de clases de Python.
+
+Vista: Parte de un proyecto de Django que se encarga de la
+lógica de negocio y es la conexión entre el template y el modelo.
+
+App: Conjunto de código que se encarga de resolver una parte
+muy específica del proyecto, contiene sus modelos, vistas, urls, etc.
+
+Patrón de diseño: Solución común a un problema particular.

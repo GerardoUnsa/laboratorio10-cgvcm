@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h1>DETECTION PAGE</h1>
+
+<div style="text-align: center;">
+  {% csrf_token %}
+  <img src="{% url 'video_feed' %}">
+</div>
+
+{% endblock %}
